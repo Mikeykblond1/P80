@@ -4,6 +4,7 @@ function submit()
 {
     var GuestName = document.getElementById("name1").value;
 	// use the push function as - names_of_people.push(GuestName);
+	names_of_people.push(GuestName);
 	console.log(GuestName);    
     console.log(names_of_people);
     var lenght_of_name = names_of_people.length;
@@ -25,7 +26,7 @@ function show()
 
 function sorting()
 	{
-		names_of_people           // add the sort function here
+		names_of_people.sort()       // add the sort function here
 		// .sort();
 		var i= names_of_people.join("<br>");
 		console.log(names_of_people);		
@@ -40,10 +41,12 @@ function searching()
 	var j;
 	for(j=0; j<names_of_people.length; j++)
 		{
-			if(s==names_of_people[j]){
+			if(s.toUpperCase()==names_of_people[j].toUpperCase()){
 				found=found+1;
 			}	
 		}
 	document.getElementById("p2").innerHTML="name found "+found+" time/s";
 	console.log("found name "+found+" time/s");
 }
+//The extra part 
+
